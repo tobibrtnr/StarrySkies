@@ -1,0 +1,89 @@
+{ 
+    "paths":    {
+        "upload":          "/api/upload",
+        "register":        "/api/register",
+        "login":           "/api/login",
+        "accounts":        "/api/accounts",
+        "saveAccount":     "/api/save/account",
+        "saveImage":       "/api/save/image",
+        "image":           "/api/images/$1",
+        "newestImages":    "/api/images/newest",
+        "profiles":        "/api/profiles",
+        "profilesSearch":  "/api/profiles?search=$1",
+        "userProfile":     "/api/profiles/$1",
+        "profileFeed":     "/api/profiles/$1/feed",
+        "userSaved":       "/api/profiles/$1/saved",
+        "userSavedBy":     "/api/profiles/$1/savedby",
+        "isSavedBy":       "/api/profiles/$1/savedby/$2",
+        "userImages":      "/api/profiles/$1/images",
+        "userSavedImages": "/api/profiles/$1/images/saved/",
+        "isImageSavedBy":  "/api/profiles/$1/images/saved/$2"
+    },
+
+    "constraintErrorMessages":
+    { "":
+      { "properties": [], 
+        "message":    null
+      }, 
+      "banned_name":
+      { "properties": ["username"], 
+        "message":    "This username is not available."
+      },
+      "d_username_check":
+      { "properties": ["username"], 
+        "message":    "Usernames only may consist of letters, digits, underscores and hyphens and must be between 3 and 20 characters long."
+      },
+      "d_email_check":
+      { "properties": ["email"], 
+        "message":    "Please check your given email address."
+      },
+      "d_untainted_check":
+      { "properties": ["title","desc"], 
+        "message":    "Please check your input on forbidden characters (e.g. <, >, ', ;, --)."
+      },
+      "account_check_username":
+      { "properties": ["username"], 
+        "message":    "Please enter a username."
+      }, 
+      "account_check_email":
+      { "properties": ["email"], 
+        "message":    "Please enter a valid email address."
+      },  
+      "account_check_password":
+      { "properties": ["password"], 
+        "message":    "Please enter a password."
+      },    
+      "account_unique_username": 
+      { "properties": ["username"], 
+        "message":    "This username is already existing."
+      },
+      "account_unique_email":    
+      { "properties": ["email"], 
+        "message":    "The email is already existing."
+      },
+      "account_exists":
+      { "properties": ["password"], 
+        "message":    "The given user id does not exist."
+      },
+      "account_one_admin_exists":
+      { "properties": ["isAdmin"], 
+        "message":    "There must be at least one admin account."
+      },  
+      "image_check_account_id":
+      { "properties": ["account_id"],
+        "message":    "An error occured with your account ID."
+      },
+      "image_check_image_data":
+      { "properties": ["image"],
+        "message":    "Please add an image file to your upload."
+      },
+      "image_check_title":
+      { "properties": ["title"],
+        "message":    "Please add a title to your upload."
+      },
+      "image_fk_account":
+      { "properties": ["account_id"],
+        "message":    "An error occured with your account ID."
+      }
+    }
+}

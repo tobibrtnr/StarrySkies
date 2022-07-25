@@ -1,0 +1,31 @@
+/*
+ * @author    Tobias Breitenauer <tobias.breitenauer@hs-augsburg.de>
+ * @copyright 2016-2022
+ * @license   MIT
+ */
+ 
+@import 'config';
+
+.brand {
+  cursor: pointer;
+}
+
+header {
+  display:          flex;
+  align-items:      center;
+  justify-content:  space-between;
+  height:           56px;
+  background-color: $header-bg;
+  padding-left:     22px;
+  padding-right:    22px;
+  box-shadow:       0 1px 7px 4px rgb(19, 19, 19);
+}
+
+.searchBar {
+  --va-input-border-radius: 44px;
+  --va-input-border-width: 0px;
+}
+
+.progressbar {
+  width: 200px;
+}

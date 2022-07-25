@@ -1,0 +1,43 @@
+/*
+ * @author    Tobias Breitenauer <tobias.breitenauer@hs-augsburg.de>
+ * @copyright 2016-2022
+ * @license   MIT
+ */
+ 
+@import 'config';
+
+.imageviewwrapper {
+    display: flex;
+}
+
+.imageinfo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.saveimagecard {
+    display: flex;
+    justify-content: end;
+}
+
+.imageviewpart {
+    background-color: $header-bg;
+    border-radius: 10px;
+    box-shadow: 0 1px 7px 4px rgb(19, 19, 19);
+
+    .imagedesc {
+        padding-right: 1px;
+        padding-bottom: 3px;
+        max-height: 7.5em;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .propsTable {
+        max-height: 15em;
+        overflow-y: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,27 @@
+/*
+ * @author    Wolfgang Kowarschick <kowa@hs-augsburg.de>
+ * @author    Tobias Breitenauer <tobias.breitenauer@hs-augsburg.de>
+ * @copyright 2016-2022
+ * @license   MIT
+ */
+
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// colors
+// other colors are defined in /service/vuesticConfig.ts
+
+$header-bg:             #202020;
+$body-bg:               #121212;
+$default-font-color:    white;
+$primary-color-dark:    #3d428b;
+
+// font sizes
+
+$font-family-sans:  'Poppins', sans-serif;
+
+$font-size-base:    15px;
+$font-size-factor:  1.125;
+ 
+$font-size-h1:      math.pow($font-size-factor,5)*$font-size-base;
+ 

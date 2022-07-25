@@ -1,0 +1,51 @@
+# Created by W. Kowarschick
+# -----------------------------------------------------------------
+
+# ignore temp-files
+tmp
+temp
+tmp.*
+temp.*
+_save_
+
+# ignore dependency directories
+node_modules
+docs
+build
+postgres-data
+
+# ignore OS/Editor generated files
+~*
+**/ehthumbs.db
+**/Thumbs.db
+**/.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ignore log files
+logs
+*.log
+
+# optional directories
+.npm
+.idea
+.eslintcache
+.env
+.create_dotenv.sh
+.vscode
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+
+create_dotenv.sh

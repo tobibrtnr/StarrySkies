@@ -1,0 +1,18 @@
+/*
+ * @author    Tobias Breitenauer <tobias.breitenauer@hs-augsburg.de>
+ * @copyright 2016-2022
+ * @license   MIT
+ */
+ 
+@import 'config';
+
+.card {
+    background-color: $header-bg;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 7px 4px rgb(19, 19, 19);
+
+    h1 {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,69 @@
+/*
+ * @author    Wolfgang Kowarschick <kowa@hs-augsburg.de>
+ * @author    Tobias Breitenauer <tobias.breitenauer@hs-augsburg.de>
+ * @copyright 2016-2022
+ * @license   MIT
+ */
+
+@import 'config';
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --va-input-opacity: 1;
+}
+
+html
+{ height:         100%;
+  width:          100%;
+}
+
+body
+{
+  font-size:      $font-size-base !important;
+  font-family:    $font-family-sans;
+  background-image:
+    radial-gradient(
+      ellipse at bottom right,
+      $primary-color-dark,
+      transparent 40%
+    ), radial-gradient(
+      ellipse at top left,
+      $primary-color-dark,
+      transparent 35%), radial-gradient(
+        ellipse at bottom,
+        $primary-color-dark,
+        $body-bg 80%);
+    
+  background-attachment: fixed;
+  color: $default-font-color;
+  margin: 0;
+}
+
+.mainContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size:   $font-size-h1;
+  font-weight: normal;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
