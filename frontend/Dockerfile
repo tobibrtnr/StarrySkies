@@ -18,6 +18,11 @@ FROM nginx:stable-alpine as production-stage
 
 COPY --from=build-stage /frontend/dist /usr/share/nginx/html
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+
+RUN mkdir -p /etc/letsencrypt/live/tobibrtnr.de
+COPY ./fullchain.pem /etc/letsencrypt/live/tobibrtnr.de/fullchain.pem
+COPY ./privkey.pem /etc/letsencrypt/live/tobibrtnr.de/privkey.pem
+ 
+EXPOSE 443
 
 CMD ["nginx", "-g", "daemon off;"]

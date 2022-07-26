@@ -21,7 +21,7 @@ profiles.route('/')
 .get
 ( 
   async (req, res) => 
-  { console.log("hello"); const 
+  { const 
       {status, data} = await profilesDB.getProfiles(req.query.search)
     
     res.status(status).json(data ?? {})

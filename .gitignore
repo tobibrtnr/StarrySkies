@@ -49,3 +49,7 @@ pids
 !.editorconfig
 
 create_dotenv.sh
+fullchain.pem
+privkey.pem
+cert.pem
+chain.pem

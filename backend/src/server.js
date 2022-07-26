@@ -5,6 +5,8 @@
  * @license   MIT
  */
 import express from 'express'
+import https   from 'https'
+import fs      from 'fs'
 
 import * as uuid           from 'uuid'
 import { auth }            from './routes/auth.js'
@@ -22,7 +24,17 @@ const
     SERVER = `http://localhost:${PORT}`,
   }        = process.env,
   c_app    = express(),
-  c_uuid   = uuid.v4;
+  c_uuid   = uuid.v4,
+
+  privateKey = fs.readFileSync('certs/privkey.pem', 'utf8'),
+  certificate = fs.readFileSync('certs/cert.pem', 'utf8'),
+  ca = fs.readFileSync('certs/chain.pem', 'utf8'),
+
+  credentials = {
+    key: privateKey,
+    cert: certificate,
+    ca: ca
+  };
 
 // Middleware that automatically converts incoming data into JSON:
 c_app.use(express.json());
@@ -49,6 +61,4 @@ c_app.use((error, req, res, next) =>
           }
          );
 
-c_app.listen(PORT);
-
-console.log(`Running on ${SERVER}`);
+https.createServer(credentials, c_app).listen(PORT);
